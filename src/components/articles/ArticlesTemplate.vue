@@ -1,7 +1,11 @@
 <template>
   <div class="col-xl c-articles">
     <h3>Articles</h3>
-    <button class="btn btn-primary" @click="handleShowForm">Add Article</button>
+    <button
+      :class="[showForm ? 'btn-danger' : 'btn-primary' ,'btn']"
+      @click="handleShowForm"
+    >{{ showForm ? 'Close' : 'Add Article' }}
+    </button>
     <FormArticle v-show="showForm"/>
   </div>
 </template>
