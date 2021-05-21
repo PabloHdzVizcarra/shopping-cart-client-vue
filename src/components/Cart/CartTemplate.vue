@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xl">
+  <div class="col-lg">
     <p>Cart</p>
   </div>
 </template>
