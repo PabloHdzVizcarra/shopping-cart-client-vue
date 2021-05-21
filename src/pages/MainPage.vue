@@ -1,14 +1,18 @@
 <template>
-  <ArticlesTemplate/>
-  <CartTemplate/>
+  <Header text="Shopping Cart"/>
+  <div class="container">
+    <ArticlesTemplate/>
+    <CartTemplate/>
+  </div>
 </template>
 
 <script>
 import ArticlesTemplate from '../components/articles/ArticlesTemplate'
 import CartTemplate from '../components/Cart/CartTemplate'
+import Header from '../components/Header'
 export default {
   name: 'MainPage',
-  components: { CartTemplate, ArticlesTemplate }
+  components: { Header, CartTemplate, ArticlesTemplate }
 }
 </script>
 
