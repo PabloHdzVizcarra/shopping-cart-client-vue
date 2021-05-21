@@ -1,12 +1,10 @@
 <template>
-  <div class="col-xl">
-    <p>Cart</p>
-  </div>
+<p>form article</p>
 </template>
 
 <script>
 export default {
-  name: 'CartTemplate'
+  name: 'FormArticle'
 }
 </script>
 

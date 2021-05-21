@@ -1,6 +1,6 @@
 <template>
   <Header text="Shopping Cart"/>
-  <div class="container">
+  <div class="container row c-main">
     <ArticlesTemplate/>
     <CartTemplate/>
   </div>
@@ -18,4 +18,7 @@ export default {
 
 <style scoped>
 
+.c-main {
+  margin: 0;
+}
 </style>
