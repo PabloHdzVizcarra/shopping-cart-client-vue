@@ -63,6 +63,12 @@ export default {
         return
       }
       this.$emit('save-article', this.newArticle)
+      this.cleanInputs()
+    },
+    cleanInputs () {
+      this.newArticle.name = ''
+      this.newArticle.price = 0
+      this.newArticle.brand = ''
     }
   }
 }
