@@ -1,8 +1,6 @@
 <template>
   <div class="col-lg c-articles">
-    <template v-for="(error, index) in errors">
-      <Alert :text="error" v-if="haveError" :key="index"/>
-    </template>
+    <Alert :text="errors" v-if="haveError"/>
     <h3>Articles</h3>
     <button
       :class="[showForm ? 'btn-danger' : 'btn-primary' ,'btn']"
@@ -33,7 +31,7 @@ export default {
       articles: [],
       showForm: false,
       haveError: false,
-      errors: []
+      errors: ''
     }
   },
   methods: {
@@ -43,9 +41,10 @@ export default {
     saveArticle (article) {
       console.log(article)
     },
-    showErrors (errors) {
+    showErrors (error) {
+      console.log(error)
       this.haveError = true
-      this.errors = [...errors]
+      this.errors = error
     }
   }
 }
