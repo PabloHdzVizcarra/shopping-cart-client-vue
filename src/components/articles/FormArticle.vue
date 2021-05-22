@@ -1,7 +1,7 @@
 <template>
   <form
     class="p-4 text-start"
-    @submit="$emit('save-article', newArticle)"
+    @submit="validateForm"
   >
     <label for="article-name" class="form-label">Name</label>
     <input
@@ -40,10 +40,31 @@ export default {
         name: '',
         price: 0,
         brand: ''
-      }
+      },
+      errors: []
     }
   },
-  emits: ['save-article']
+  emits: ['save-article', 'validate-error'],
+  methods: {
+    validateForm () {
+      if (this.newArticle.name === '') {
+        this.errors.push('the name is not valid')
+      }
+      if (this.newArticle.price <= 0) {
+        this.errors.push('the price must be greater than 0')
+      }
+
+      if (this.newArticle.brand === '') {
+        this.errors.push('the price is not valid')
+      }
+
+      if (this.errors.length !== 0) {
+        this.$emit('validate-error', this.errors)
+        return
+      }
+      this.$emit('save-article', this.newArticle)
+    }
+  }
 }
 </script>
 
