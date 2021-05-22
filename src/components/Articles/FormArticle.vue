@@ -53,6 +53,8 @@ export default {
         this.newArticle.brand === ''
       ) {
         this.errors = 'You have a empty fields'
+      } else {
+        this.errors = ''
       }
 
       if (this.errors) {

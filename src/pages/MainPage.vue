@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ArticlesTemplate from '../components/articles/ArticlesTemplate'
+import ArticlesTemplate from '../components/Articles/ArticlesTemplate'
 import CartTemplate from '../components/Cart/CartTemplate'
 import Header from '../components/Header'
 export default {
