@@ -39,6 +39,8 @@ export default {
       this.showForm = !this.showForm
     },
     saveArticle (article) {
+      this.errors = ''
+      this.haveError = false
       console.log(article)
     },
     showErrors (error) {
