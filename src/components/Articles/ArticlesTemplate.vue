@@ -1,5 +1,5 @@
 <template>
-  <div class="col-lg c-articles">
+  <div class="col-lg c-articles flex">
     <Alert :text="errors" v-if="haveError"/>
     <h3>Articles</h3>
     <button
@@ -13,20 +13,20 @@
       @save-article="saveArticle"
       @validate-error="showErrors"
     />
+    <ListArticles/>
 
-    <div v-for="article in articles" :key="article.price">
-      <p>{{ article.name }}</p>
-    </div>
   </div>
 </template>
 
 <script>
 import FormArticle from './FormArticle'
 import Alert from './Alert'
+import ListArticles from '@/components/Articles/ListArticles'
 
 export default {
   name: 'ArticlesTemplate',
   components: {
+    ListArticles,
     Alert,
     FormArticle
   },
