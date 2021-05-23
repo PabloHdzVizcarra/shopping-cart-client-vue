@@ -65,7 +65,16 @@ export default {
           console.log(data)
         })
         .catch(console.log)
+    },
+    async getArticlesToDatabase () {
+      const response = await fetch('api/v1/article')
+      const data = await response.json()
+
+      this.articles = [...data]
     }
+  },
+  mounted () {
+    this.getArticlesToDatabase()
   }
 }
 </script>
