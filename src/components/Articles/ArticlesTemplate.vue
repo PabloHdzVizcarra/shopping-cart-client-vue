@@ -41,12 +41,24 @@ export default {
     saveArticle (article) {
       this.errors = ''
       this.haveError = false
-      console.log(article)
+      this.saveArticleInDatabase(article)
     },
     showErrors (error) {
-      console.log(error)
       this.haveError = true
       this.errors = error
+    },
+    async saveArticleInDatabase (article) {
+      fetch('api/v1/article', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(article)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+        })
     }
   }
 }
