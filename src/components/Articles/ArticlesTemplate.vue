@@ -13,6 +13,10 @@
       @save-article="saveArticle"
       @validate-error="showErrors"
     />
+
+    <div v-for="article in articles" :key="article.price">
+      <p>{{ article.name }}</p>
+    </div>
   </div>
 </template>
 
@@ -57,8 +61,10 @@ export default {
       })
         .then(response => response.json())
         .then(data => {
+          this.articles.push(data)
           console.log(data)
         })
+        .catch(console.log)
     }
   }
 }
