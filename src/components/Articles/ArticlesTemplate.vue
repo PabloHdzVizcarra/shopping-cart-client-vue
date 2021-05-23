@@ -1,7 +1,6 @@
 <template>
   <div class="col-lg c-articles flex">
     <Alert :text="errors" v-if="haveError"/>
-    <h3>Articles</h3>
     <button
       :class="[showForm ? 'btn-danger' : 'btn-primary' ,'btn']"
       @click="handleShowForm"
@@ -13,8 +12,7 @@
       @save-article="saveArticle"
       @validate-error="showErrors"
     />
-    <ListArticles/>
-
+    <ListArticles :articles="articles" />
   </div>
 </template>
 
@@ -82,6 +80,7 @@ export default {
 <style scoped>
 .c-articles {
   background-color: rgba(202, 210, 197, .2);
-  border: 4px;
+  border: 6px;
+  padding: 10px;
 }
 </style>
