@@ -80,7 +80,7 @@ export default {
 <style scoped>
 .c-articles {
   background-color: rgba(202, 210, 197, .2);
-  border: 6px;
+  border-radius: 4px;
   padding: 10px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="c-header ">
+  <nav class="c-header">
     <img src="https://img.icons8.com/nolan/64/fast-cart.png" alt="shopping"/>
     <div class="header-c-title">
       <a class="navbar-brand header__text" href="#">{{ text }}</a>
